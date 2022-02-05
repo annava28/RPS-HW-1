@@ -4,39 +4,45 @@ A Starter Repository for the [Rock Paper Scissors Exercise](https://github.com/p
 
 ## Setup
 
-Create a virtual environment:
-No need to create a specific virtual environment! This program runs on the "base" environment. 
+Creating the virtual environment:
 
 ```sh
 conda create -n rps-env python=3.8
 ```
 
-Activate the virtual environment:
+Activating the virtual environment:
 
 ```sh
 conda activate rps-env
 ```
-## Usage
 
-Install package dependencies (mainly for testing):
-Navigate to the repository. For example, if saved in desktop:
-
+Installing package dependencies (mainly for testing):
 ```sh
 pip install -r requirements.txt
-cd ~/Desktop/RPS-HW-1
 ```
 
 ## Usage
+Navigating to the repository. For example, if saved in desktop:
 
-Run the rock paper scissors game:
+```sh
+cd ~/Desktop/RPS-HW-1
+```
+
+Running the rock paper scissors game (see below for username customization):
 
 ```sh
 python game.py
 ```
 
+If user wishes to customize username - if uncustomized, default name is 'Player One':
+
+```sh
+PLAYER_NAME="Jon Snow" python game.py
+```
+
 ## Testing
 
-Run tests:
+Running tests:
 
 ```sh
 pytest
