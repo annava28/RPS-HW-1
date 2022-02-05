@@ -10,7 +10,7 @@ user_weapon = input("Please select your weapon: 'Rock', 'Paper', 'Scissors': ")
 acceptable = "Rock rock ROCK paper Paper PAPER Scissors scissors SCISSORS"
 
 if user_weapon not in acceptable:
-    print ("Please ensure you have selected correctly from the above weapons.")
+    print ("Oh no! Please ensure you have selected correctly from the above weapons.")
     quit()
 else: 
     print("You chose: ", user_weapon)
@@ -46,8 +46,10 @@ elif user_weapon == "rock":
     if ai_weapon == "scissors":
         print("Rock obliterates scissors. You won!")
     else:
-        print("Paper suffocates rock You lost! It’s ok.")
+        print("Paper suffocates rock You lost the battle. Better luck next time!")
 
-# display the final result
+# goodbye message
+
+print("Wow! Wasn't that riveting? Hope you're ready for another round!")
 
 
