@@ -39,11 +39,3 @@ If user wishes to customize username - if uncustomized, default name is 'Player 
 ```sh
 PLAYER_NAME="BOJACK HORSEMAN" python game.py
 ```
-
-## Testing
-
-Running tests:
-
-```sh
-pytest
-```
