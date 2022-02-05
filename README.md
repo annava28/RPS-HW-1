@@ -37,7 +37,7 @@ python game.py
 If user wishes to customize username - if uncustomized, default name is 'Player One':
 
 ```sh
-PLAYER_NAME="Jon Snow" python game.py
+PLAYER_NAME="BOJACK HORSEMAN" python game.py
 ```
 
 ## Testing

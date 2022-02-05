@@ -1,55 +1,56 @@
 
+# customizing player name
+import os 
+player_name = os.getenv("PLAYER_NAME", default="Player One")
+
 # welcoming the user
-print("Welcome 'Player One' a riveting game of Rock, Paper, Scissors. Hope you're ready.")
+print("---------------------------------------------------------------")
+print("Welcome", player_name, "to an intense game of Rock, Paper, Scissors. Hope you're ready...")
+print("---------------------------------------------------------------")
 
 # ask for user input
 user_weapon = input("Please select your weapon: 'Rock', 'Paper', 'Scissors': ")
-
+print("---------------------------------------------------------------")
 # validations
-
 acceptable = "Rock rock ROCK paper Paper PAPER Scissors scissors SCISSORS"
 
 if user_weapon not in acceptable:
     print ("Oh no! Please ensure you have selected correctly from the above weapons.")
     quit()
 else: 
-    print("You chose: ", user_weapon)
+    print(player_name, "chose:", user_weapon)
     
-
 # computer choice
-
 
 import random
 options = ["rock", "paper", "scissors"]
 
 ai_weapon = random.choice(options)
 
-print("The super intelligent AI chose: ", ai_weapon)
+print("The SUPER intelligent AI chose:", ai_weapon)
+print("---------------------------------------------------------------")
 
-
-# determine the winner
+# determine the winner + displaying result 
 # adapted from Marie-Eugenie Chandon-Moet on Slack
 
 if user_weapon == ai_weapon:
-    print("You both wielded ", user_weapon, ". A worthy match - it's a tie!"
+    print("Both players played", user_weapon, "An even match!")
 elif user_weapon == "paper":
     if ai_weapon == "rock":
-        print("Paper suffocates rock. You won the battle!")
+        print("Paper covers rock. You won!")
     else:
-        print("Scissors viciously cuts paper. You lost the battle. Better luck next time!")
+        print("Scissors cuts paper. You lost. Better luck next time!")
 elif user_weapon == "scissors":
     if ai_weapon == "paper":
-        print("Scissors viciously cuts paper. You won the battle!")
+        print("Scissors cuts paper. You won!")
     else:
-        print("Rock obliterates scissors. You lost the battle. Better luck next time!")
+        print("Rock crushes scissors. You lost. Better luck next time!")
 elif user_weapon == "rock":
     if ai_weapon == "scissors":
-        print("Rock obliterates scissors. You won!")
+        print("Rock crushes scissors. You won!")
     else:
-        print("Paper suffocates rock You lost the battle. Better luck next time!")
+        print("Paper covers rock. You lost. Better luck next time!")
 
 # goodbye message
-
-print("Wow! Wasn't that riveting? Hope you're ready for another round!")
-
-
+print("---------------------------------------------------------------")
+print("Wow! Wasn't that riveting? Hope you're ready for another round...")
